@@ -34,6 +34,7 @@ Create a web application that helps users manage their personal finances by trac
   - **Framework/Library:** React for dynamic and interactive user interfaces.
   - **State Management:** Use React state or context for managing application state.
   - **Routing:** Implement client-side routing using libraries like React Router.
+  - **HTTP Requests:** Use Axios for handling HTTP requests to interact with the backend.
 
 - **Reporting and Charts:**
   - **Libraries:** Use JavaScript libraries for charts and reports, such as Chart.js or D3.js.
@@ -54,6 +55,12 @@ Create a web application that helps users manage their personal finances by trac
   - **State Management:** Manage application state using React's state or context API.
   - **Routing:** Implement client-side routing for navigating between different views.
   - **Forms:** Create forms for user input to add transactions and set budgets.
+  - **HTTP Requests with Axios:**
+    - **Setup Axios:** Install and configure Axios for making HTTP requests.
+    - **Making Requests:** Use Axios to send GET, POST, PUT, and DELETE requests to the backend.
+    - **Handling Responses:** Process and handle responses from the backend, including success and error cases.
+    - **Error Handling:** Implement error handling to manage HTTP errors and display appropriate messages to users.
+    - **Request Interceptors:** Optionally set up request interceptors to add authentication tokens or other headers.
 
 - **Database:**
   - **Schema:** Design tables for users, transactions, categories, and budgets.
