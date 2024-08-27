@@ -1,13 +1,11 @@
-package com.financeapp.Personal.Finance.Tracker;
+package com.financeapp.FTP;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PersonalFinanceTrackerApplicationTests {
-
+class Temp {
 	@Test
 	void contextLoads() {
 	}
-
 }
