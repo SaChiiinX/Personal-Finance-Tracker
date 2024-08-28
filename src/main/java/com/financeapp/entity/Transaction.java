@@ -73,37 +73,32 @@ public class Transaction {
         if (accountId == null){
             if(other.accountId != null)
                 return false;
-        }else if(!accountId.equals(other.accountId)){
+        }else if(!accountId.equals(other.accountId))
             return false;
-        }
 
         if (amount == null){
             if(other.amount != null)
                 return false;
-        }else if(!amount.equals(other.amount)){
+        }else if(!amount.equals(other.amount))
             return false;
-        }
 
         if (transactionType == null){
             if(other.transactionType != null)
                 return false;
-        }else if(!transactionType.equals(other.transactionType)){
+        }else if(!transactionType.equals(other.transactionType))
             return false;
-        }
 
         if (category == null){
             if(other.category != null)
                 return false;
-        }else if(!category.equals(other.category)){
+        }else if(!category.equals(other.category))
             return false;
-        }
 
         if (date == null){
             if(other.date != null)
                 return false;
-        }else if(!date.equals(other.date)){
+        }else if(!date.equals(other.date))
             return false;
-        }
         return true;
     }
 
@@ -112,7 +107,7 @@ public class Transaction {
         return "Transaction{" +
                 "transactionId='" + transactionId +
                 ", accountId='" + accountId +
-                ", amount='" + amount + '\'' +
+                ", amount='" + amount + 
                 ", transactionType='" + transactionType +
                 ", category='" + category + 
                 ", date='" + date.toString() +  '\'' +
