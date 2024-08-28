@@ -25,7 +25,7 @@ create table transactions (
 create table recurringTransactions (
     transactionId bigint primary key auto_increment,
     transactionId bigint not null,
-    recurrencePattern ENUM('DAILY', 'WEEKLY', 'MONTHLY', 'YEARLY') not null,
+    recurrencePattern ENUM('DAILY', 'WEEKLY', 'MONTHLY', 'BI_WEEKLY', 'QUARTERLY', 'SEMI-YEARLY', 'YEARLY') not null,
     startDate date not null,
     endDate date, 
     foreign key (transactionId) references transactions(transactionId),
