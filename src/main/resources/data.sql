@@ -19,6 +19,7 @@ create table transaction (
     transactionType ENUM('INCOME', 'EXPENSE') not null,
     category varchar(255) not null,
     transactionDate date not null,
+    details varchar(255),
     foreign key (accountId) references account(accountId)
 );
 
@@ -39,6 +40,7 @@ create table combinedTransaction (
     transactionType enum('INCOME', 'EXPENSE') not null,
     category varchar(255) not null,
     transactionDate date not null,
+    details varchar(255),
     recurringTransactionId bigint not null,
     recurrencePattern enum('DAILY', 'WEEKLY', 'MONTHLY', 'BI_WEEKLY', 'QUARTERLY', 'SEMI_YEARLY', 'YEARLY') not null,
     startDate date not null,

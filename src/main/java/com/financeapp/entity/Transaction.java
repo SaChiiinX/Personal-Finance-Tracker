@@ -14,30 +14,33 @@ public class Transaction {
     private Double amount;
     private TransactionType transactionType;
     private String category;
-    private LocalDate date;
+    private LocalDate transactionDate;
+    private String details;
 
-    public Transaction(Long accountId, Double amount, TransactionType transactionType, String category){
+    public Transaction(Long accountId, Double amount, TransactionType transactionType, String category,  String details){
         this.accountId = accountId;
         this.amount = amount;
         this.transactionType = transactionType;
         this.category = category;
-        this.date = LocalDate.now();
+        this.transactionDate = LocalDate.now();
+        this.details = details;
     }
 
-    public Transaction(Long accountId, Double amount, TransactionType transactionType, String category, LocalDate date){
+    public Transaction(Long accountId, Double amount, TransactionType transactionType, String category, LocalDate transactionDate,  String details){
         this.accountId = accountId;
         this.amount = amount;
         this.transactionType = transactionType;
         this.category = category;
-        this.date = date;
+        this.transactionDate = transactionDate;
+        this.details = details;
     }
 
-    public Transaction(Long transactionId, Long accountId, Double amount, TransactionType transactionType, String category, LocalDate date){
+    public Transaction(Long transactionId, Long accountId, Double amount, TransactionType transactionType, String category, LocalDate transactionDate){
         this.accountId = accountId;
         this.amount = amount;
         this.transactionType = transactionType;
         this.category = category;
-        this.date = date;
+        this.transactionDate = transactionDate;
     }
 
     public Long getTransactionId() { return transactionId; }
@@ -50,8 +53,10 @@ public class Transaction {
     public void setTransactionType(TransactionType transactionType) { this.transactionType = transactionType; }
     public String getCategory() { return category; }
     public void setCategory(String category) { this.category = category; }
-    public LocalDate getDate() { return date; }
-    public void setDate(LocalDate date) { this.date = date; }
+    public LocalDate getTransactionDate() { return transactionDate; }
+    public void setTransactionDate(LocalDate transactionDate) { this.transactionDate = transactionDate; }
+    public String getDetails() { return details; }
+    public void setDetails(String details) { this.details = details; }
 
     @Override
     public boolean equals(Object obj) {
@@ -94,10 +99,10 @@ public class Transaction {
         }else if(!category.equals(other.category))
             return false;
 
-        if (date == null){
-            if(other.date != null)
+        if (transactionDate == null){
+            if(other.transactionDate != null)
                 return false;
-        }else if(!date.equals(other.date))
+        }else if(!transactionDate.equals(other.transactionDate))
             return false;
         return true;
     }
@@ -110,7 +115,7 @@ public class Transaction {
                 ", amount='" + amount + 
                 ", transactionType='" + transactionType +
                 ", category='" + category + 
-                ", date='" + date.toString() +  '\'' +
+                ", transactionDate='" + transactionDate.toString() +  '\'' +
                 '}';
     }
 
