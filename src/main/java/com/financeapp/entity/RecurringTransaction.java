@@ -3,7 +3,7 @@ package com.financeapp.entity;
 import jakarta.persistence.*;
 import java.time.*;
 @Entity
-@Table(name = "recurringTransactions")
+@Table(name = "recurringTransaction")
 public class RecurringTransaction {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

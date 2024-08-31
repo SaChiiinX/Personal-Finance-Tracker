@@ -12,7 +12,7 @@ create table expenseRecord (
     foreign key (accountId) references account(accountId)
 );
 
-create table transactions (
+create table transaction (
     transactionId bigint primary key auto_increment,
     accountId bigint not null,
     amount decimal(10, 2) not null,
@@ -22,7 +22,7 @@ create table transactions (
     foreign key (accountId) references account(accountId)
 );
 
-create table recurringTransactions (
+create table recurringTransaction (
     recurringTransactionId bigint primary key auto_increment,
     transactionId bigint not null,
     recurrencePattern ENUM('DAILY', 'WEEKLY', 'MONTHLY', 'BI_WEEKLY', 'QUARTERLY', 'SEMI-YEARLY', 'YEARLY') not null,
