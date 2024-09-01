@@ -29,7 +29,7 @@ create table recurringTransaction (
     recurrencePattern ENUM('DAILY', 'WEEKLY', 'MONTHLY', 'BI_WEEKLY', 'QUARTERLY', 'SEMI-YEARLY', 'YEARLY') not null,
     startDate date not null,
     endDate date, 
-    foreign key (transactionId) references transactions(transactionId)
+    foreign key (transactionId) references transaction(transactionId)
 );
 
 create table combinedTransaction (
@@ -45,7 +45,7 @@ create table combinedTransaction (
     recurrencePattern enum('DAILY', 'WEEKLY', 'MONTHLY', 'BI_WEEKLY', 'QUARTERLY', 'SEMI_YEARLY', 'YEARLY') not null,
     startDate date not null,
     endDate date,
-    foreign key (transactionId) references transactions(transactionId) on delete cascade,
-    foreign key (recurringTransactionId) references recurringTransactions(recurringTransactionId) on delete cascade,
+    foreign key (transactionId) references transaction(transactionId) on delete cascade,
+    foreign key (recurringTransactionId) references recurringTransaction(recurringTransactionId) on delete cascade,
     foreign key (accountId) references account(accountId)
 );
