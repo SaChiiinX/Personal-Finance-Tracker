@@ -15,5 +15,5 @@ public interface AccountRepository extends JpaRepository<Account, Long>{
     Account exists(@Param("username") String username);
 
     @Query("from Account where accountId = :accountId")
-    Account exists(@Param("accountId") int accountId);
+    Account exists(@Param("accountId") long accountId);
 }
